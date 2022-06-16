@@ -3,11 +3,7 @@ import * as restaurantsCtrl from '../controllers/restaurants.js'
 
 const router = Router()
 
-// app.get('/', function(req,res) {
-//   res.render('restaurants/index', {
-//     restaurants: restaurants
-//   })
-// })
+router.get('/', restaurantsCtrl.index)
 
 export {
   router

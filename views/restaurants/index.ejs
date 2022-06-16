@@ -7,13 +7,13 @@
   <title>Restaurants</title>
 </head>
 <body>
-  <h1>Coco's Skilss</h1>
+  <h1>Restaurants</h1>
   <ul>
     <% restaurants.forEach(restaurant => { %>
       <li>
 				<%= restaurant.text %> 
 				- 
-				<%= restaurants.visit ? 'visit' : 'did not visit' %>
+				<%= restaurant.visit ? 'visited' : 'did not visit' %>
 			</li>
     <% }) %>
   </ul>
