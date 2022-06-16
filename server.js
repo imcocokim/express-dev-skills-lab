@@ -6,7 +6,6 @@ import logger from 'morgan'
 
 // import routers
 import { router as indexRouter } from './routes/index.js'
-import { router as usersRouter } from './routes/users.js'
 import { router as restaurantsRouter } from './routes/restaurants.js'
 
 // set up app
@@ -31,7 +30,6 @@ app.use(
 
 // mounted routers
 app.use('/', indexRouter)
-app.use('/users', usersRouter)
 app.use('/restaurants', restaurantsRouter)
 
 // catch 404 and forward to error handler
