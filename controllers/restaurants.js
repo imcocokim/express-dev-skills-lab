@@ -4,7 +4,8 @@ function index (req, res) {
   Restaurant.find({})
   .then(restaurants => {
     res.render('restaurants/index', {
-      restaurants: restaurants
+      restaurants: restaurants,
+      time: req.time
     })
   })
   .catch(error => {
@@ -41,6 +42,7 @@ function show (req, res) {
     res.redirect('/restaurants')
   })
 }
+
 
 export {
   index,
