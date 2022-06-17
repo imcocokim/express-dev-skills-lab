@@ -9,9 +9,10 @@
 </head>
 <body>
   <h1>Restaurants</h1>
+  <a href="/restaurants/<%= restaurant._id%>/edit">Edit</a>
   <h2>Restaurant #<%= restaurant._id%></h2>
   <h3><%= restaurant.text%> </h3>
   <p>Complete: <%= restaurant.visit ? 'visited' : 'did not visit' %> </p>
-  
+  <a href="/restaurants">Go back</a>
 </body>
 </html>

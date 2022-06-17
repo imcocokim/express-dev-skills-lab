@@ -55,10 +55,25 @@ function deleteRestaurant (req, res) {
 
 }
 
+function edit(req,res) {
+  Restaurant.findById(req.params.id)
+  .then(restaurant => {
+    res.render('restaurants/edit', {
+      restaurant: restaurant
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/restaurants')
+  })
+}
+
 export {
   index,
   newRestaurant as new,
   create,
   show,
-  deleteRestaurant as delete
+  deleteRestaurant as delete,
+  edit,
+
 }
