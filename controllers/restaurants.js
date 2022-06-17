@@ -68,6 +68,18 @@ function edit(req,res) {
   })
 }
 
+function update(req, res) {
+  req.body.visit = !!req.body.visit
+  Restaurant.findByIdAndUpdate(req.params.id, req.body, {new:true})
+  .then(restaurant => {
+    res.redirect(`/restaurants/${restaurant._id}`)
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/restaurants')
+  })
+}
+
 export {
   index,
   newRestaurant as new,
@@ -75,5 +87,5 @@ export {
   show,
   deleteRestaurant as delete,
   edit,
-
+  update
 }
