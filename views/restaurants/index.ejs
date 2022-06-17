@@ -11,12 +11,13 @@
   <ul>
     <% restaurants.forEach(restaurant => { %>
       <li>
-				<%= restaurant.text %> 
+				<a href="/restaurants/<%= restaurant._id%>"><%= restaurant.text %></a>
 				- 
 				<%= restaurant.visit ? 'visited' : 'did not visit' %>
 			</li>
     <% }) %>
   </ul>
+  <a href="/restaurants/new">Add Restaurants</a>
   
 </body>
 </html>
