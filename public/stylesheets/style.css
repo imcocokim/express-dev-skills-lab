@@ -1,8 +1,31 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: darkgray;
 }
 
 a {
   color: #00B7FF;
+}
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+	
+.delete-form button {
+  color: darkred;
+  background-color: transparent;
+}
+	
+li {
+  list-style: none;
+}
+
+a {
+  color: darkgreen;
+}
+
+a:hover {
+  color: darkmagenta;
 }
